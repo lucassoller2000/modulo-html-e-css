@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+body{
+	filter: sepia(100);
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+
+.container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body{
+	background:antiquewhite;
+}
+
+.first-page{
+	padding: 10px;
+	border: 2px solid black;
+	width: 48%;
+	float: left;
+}
+
+.first-news div{
+	font-size: 7pt;
+	text-align: justify;
+	padding: 10px;
+	width: 21%;
+	float: right;
+	margin-top: -20px;
+}
+
+@font-face{
+	font-family: "harry-potter";
+	src: url(HARRYP__.TTF);
+}
+
+h1{
+	text-align: center;
+	font-size: 40pt;
+	font-family: "harry-potter";
+}
+
+h2{
+	font-size: 10pt;
+	text-align: center;
+	font-family:"Segoe UI";
+}
+
+h3{
+	float: left;
+	font-size: 13pt;
+	margin-bottom: -15px;
+}
+#dp{
+	margin-left: 10px;
+	width: 640px;
+	height: 90px;
+}
+
+#sirius{
+	float: right;
+}
+
+.big-news{
+	float: left;
+	width: 25%;
+	font-size: 7pt;
+	text-align: justify;
+	margin-top: -10px;
+}
+.hogwarts-news{
+	margin-top: -30px;
+	float: right;
+	width: 70%;
+}
+.big-news p::first-letter{
+	font-size: 30px;
+	float: left;
+	margin-top: -5px;
+}
+
+#hogwarts{
+	display: block;
+    margin-left: auto;
+	margin-right: auto;
+	height: 250px;
+}
+
+.random{
+	margin-top: 10px;
+	width: 100%;
+}
+
+.random div{
+	float: left;
+	width: 25%;
+	font-size: 10px;
+}
+
+.magic{
+	width: 120px;
+	height: 120px;
+	display: block;
+    margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}

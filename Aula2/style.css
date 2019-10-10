@@ -1,0 +1,22 @@
+body{
+    background: url(https://i.pinimg.com/originals/0b/f2/cf/0bf2cf4140d3b0e2e142e9c3b30dde32.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: black;
+}
+h1{
+    text-align: center;
+    font-size: 50pt;
+    color: wheat
+}
+
+p{
+    text-align: justify;
+    text-indent: 20pt ;
+    color: #ED2222;
+}
+
+small{
+    color: #5F0202
+}

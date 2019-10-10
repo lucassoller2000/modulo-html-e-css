@@ -1,0 +1,162 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    overflow: hidden;
+}
+
+.container{
+    width: 800px;
+    height: 640px;
+    background: url(background.png),#4FBEF7;
+    background-position-x: -239px;
+    background-position-y: -115px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flight{
+    height: 500px;
+}
+
+.duck, .duck2, .duck3, .duck4, .duck5{
+    visibility: hidden;
+    position: absolute;
+    animation: mover 5s linear forwards;  
+}
+
+.duck{
+    animation-delay: 0s;
+}
+
+.duck2{
+    animation-delay: 5s;
+}
+
+.duck3{
+    animation-delay: 10s;
+} 
+
+.duck4{
+    animation-delay: 15s;
+}
+
+.duck5{
+    animation-delay: 20s;
+}
+
+.footer{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px;
+}
+
+.placar{
+    width: 500px;
+    height: 80px;
+    background: black;
+    border-radius: 7px;
+    border: 1px solid #35FD46;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.duckrow{
+    display: flex;
+    width: 200px;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.duckrow div{
+    margin-right: -38px;
+}
+
+.flight input[type="radio"] + div label:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 68px;
+    height: 58px;
+    background: url(flying-duck.png) no-repeat 0 -4px;
+    animation: voar 1s steps(3) infinite;
+    opacity: 1;
+}
+
+.flight input[type="radio"]:checked + div {
+    animation-play-state: paused;
+}
+
+.flight input[type="radio"]:checked + div label:before {
+    animation: morrer 1s forwards;
+    background: url(dead-duck.png);
+    width: 36px;
+    height: 60px;
+}
+
+.duckrow input[type="radio"] + label:before {
+    background: url(dead-duck-small.png) no-repeat 10px 10px;
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 68px;
+    height: 100%;
+}
+
+.duckrow input[type="radio"]:checked + label:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 68px;
+    height: 100%;
+    background: url(alive-duck-small.png) no-repeat 10px 10px;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+@keyframes voar{
+    to{
+        background-position: -241px -4px;
+    }
+}
+
+@keyframes mover{
+    0%{
+        position: relative;
+        visibility: visible;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    20%{
+        margin-top: 300px;
+        margin-left: 150px;
+    }
+    40%{
+        margin-top: 200px;
+        margin-left: 600px;
+    }
+    60%{
+        margin-top: 400px;
+        margin-left: 300px;
+    }
+    80%{
+        margin-top: 0px;
+        margin-left: 100px;
+    }
+    100%{
+        margin-top: -1000px;
+        margin-left: -1000px;
+    }
+}
+
+@keyframes morrer{
+    to{
+        opacity: 0;
+    }
+}
